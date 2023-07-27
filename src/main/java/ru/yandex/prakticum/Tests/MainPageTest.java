@@ -29,9 +29,8 @@ public class MainPageTest extends BaseTest {
                 { 7, "Да, обязательно. Всем самокатов! И Москве, и Московской области." }
         };
     }
-
     @Test
-    public void QuestionFieldsTest(){
+    public void questionFieldsTest(){
 
         MainPage mainPage = new MainPage(driver);
         mainPage.open();
