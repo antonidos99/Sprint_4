@@ -6,11 +6,6 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import ru.yandex.prakticum.PageObject.MainPage;
-
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     protected WebDriver driver;

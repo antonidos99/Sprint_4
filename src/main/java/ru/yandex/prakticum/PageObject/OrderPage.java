@@ -110,14 +110,15 @@ public class OrderPage {
                 .xpath(String.format(".//div[@class='Dropdown-option' and text()='%s']", rentPeriod))).click();
     }
 
-    //Нажать на кнопку создания заказа в заголовке
-    public void clickOrderButtonOnHeader(){
-        driver.findElement(orderButtonHeader).click();
+    public void clickOrderButtons(String button) {
+        if (button.equals("Кнопка в заголовке")) {
+            driver.findElement(orderButtonHeader).click();
+        }else if (button.equals("Кнопка на главной странице")){
+            scrollToOrderButton(); //без этого у меня не работает
+            driver.findElement(orderButtonHomePage).click();
+        }
     }
-    //Нажать на кнопку создания заказа на главной странице
-    public void clickOrderButtonOnHomePage() {
-        driver.findElement(orderButtonHomePage).click();
-    }
+
     public void selectScooterColour(String colour) {
         if (colour.equals("чёрный жемчуг")) {
             driver.findElement(scooterBlackColourCheckbox).click();

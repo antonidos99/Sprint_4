@@ -1,13 +1,8 @@
 package ru.yandex.prakticum.Tests;
 
-import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import ru.yandex.prakticum.ConstantsURL;
 import ru.yandex.prakticum.PageObject.MainPage;
 
 import static org.junit.Assert.assertEquals;
