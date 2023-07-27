@@ -17,24 +17,10 @@ public class BaseTest {
 
     @Before
     public void setup() {
-
-        String browser = "Google";
-
-        if (browser == "Google"){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--remote-allow-origins=*");
         driver = new ChromeDriver(options);
-        } else if (browser == "FireFox"){
-            System.setProperty("webdriver.gecko.driver", "C:\\WebDriverMozilla\\bin\\geckodriver.exe");
-            FirefoxOptions options = new FirefoxOptions();
-            options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-            driver = new FirefoxDriver(options);
-            driver.manage().window().maximize();
-            driver.manage().deleteAllCookies();
-            driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        }
 
     }
     //Закрываем браузер
